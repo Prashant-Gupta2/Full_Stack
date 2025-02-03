@@ -1,15 +1,31 @@
 {
+          "version": 2,
           "builds": [
             {
-              "src": "./server.js",
+              "src": "package.json",
               "use": "@vercel/node"
+            },
+            {
+              "src": "public/*",
+              "use": "@vercel/static"
+            },
+            {
+              "src": "pages/*",
+              "use": "@vercel/next"
             }
           ],
           "routes": [
             {
-              "src": "/(.*)",
-              "dest": "/server.js"
+              "src": "/api/(.*)",
+              "dest": "/api/$1.js"
+            },
+            {
+              "src": "/old-url",
+              "dest": "/new-url"
             }
-          ]
+          ],
+          "env": {
+            "MY_ENV_VAR": "some_value"
+          }
         }
         
