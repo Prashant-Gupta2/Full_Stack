@@ -34,7 +34,7 @@ export default function DashAdmin() {
      }    
   return (
     <div className='bg-light p-2 text-dark'>
-      <h2 className='text-center'>Admin Dashboard of Video Library</h2>
+      <h2 className='text-center heading'>Admin Dashboard of Video Library</h2>
       <button onClick={handleAddVideo} className="btn btn-primary bi bi-camera-video"> Add Video</button>
       <Link to="/admin" className="btn btn-danger ms-2">Back</Link>
       <table className="table table-hover">

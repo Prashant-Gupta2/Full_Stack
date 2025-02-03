@@ -54,7 +54,7 @@ app.get("/get-admin", async(req,res)=>{
        const client= await mongodb.connect(constr);
        const database= client.db("Video_Library");
        const collection= database.collection("tblvideo");
-       collection.findOne({videoid:parseInt(req.params.categoryid)}).then(document=>{
+       collection.find({categoryid:parseInt(req.params.categoryid)}).toArray().then(document=>{
          res.json(document);  
        })
   }

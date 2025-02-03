@@ -64,10 +64,10 @@ export default function EditVideo() {
   }, [params.id]);
 
   return (
-    <div className="bg-light p-2 w-25 overflow-auto" style={{ height: '450px' }}>
+    <div className="bg-light p-2 login overflow-auto" style={{ height: '450px' }}>
     <ToastContainer/>
       <form onSubmit={handleSubmit} className="p-2">
-        <h3 className="text-center">Edit Video</h3>
+        <h3 className="text-center heading">Edit Video</h3>
         <dl>
           <dt>VideoId</dt>
           <dd>

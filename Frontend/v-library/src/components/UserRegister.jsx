@@ -51,11 +51,11 @@ export default function UserRegister() {
           
        
   return (
-          <div className='w-25 bg-light p-3 m-3 overflow-auto' style={{height:'500px'}}>
+          <div className='login bg-light p-3 m-3 overflow-auto' style={{height:'500px'}}>
           <ToastContainer/>
            <Link to="/user" className="float-end btn btn-close"></Link>
           <form onSubmit={formik.handleSubmit}>
-             <h3 className='text-center'>User Register</h3>
+             <h3 className='text-center heading'>User Register</h3>
               <dl>
                 <dt>UserId</dt> 
                 <dd><input type='text' name='userid' onChange={formik.handleChange} className='form-control' placeholder='userid'/></dd>

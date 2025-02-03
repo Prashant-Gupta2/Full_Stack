@@ -46,10 +46,10 @@ export default function AddVideo() {
         };
       
   return (
-    <div className='bg-light p-2 w-25 overflow-auto'  style={{height:'450px'}}>
+    <div className='bg-light p-2 login overflow-auto'  style={{height:'450px'}}>
                    <Link to="/dashboard" className="float-end btn btn-close"></Link>
       <form onSubmit={handleSubmit(onSubmit)} className='p-2'>
-             <h3 className='text-center'>Add Video</h3>
+             <h3 className='text-center heading'>Add Video</h3>
               <dl>
                 <dt>VideoId</dt> 
                 <dd><input {...register("videoid",{required:true})}  name='videoid' type='number' className='form-control' placeholder='videoid'/></dd>

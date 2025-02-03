@@ -5,6 +5,7 @@ import {ToastContainer,toast} from "react-toastify"
 import axios from "axios"
 
 export default function AdminLogin() {
+  
      const navigate=useNavigate();     
     const  formik=useFormik({
       initialValues:{
@@ -34,10 +35,10 @@ export default function AdminLogin() {
      } 
     });     
   return (
-    <div className='w-25 bg-light p-2 m-3'>
+    <div className='login bg-light p-2 m-3'>
         <Link to="/" className="float-end btn btn-close"></Link>
       <form onSubmit={formik.handleSubmit}>
-         <h3 className='text-center'>Admin Login</h3>
+         <h3 className='text-center heading'>Admin Login</h3>
           <dl>
             <dt>UserId</dt> 
             <dd><input type='text' onChange={formik.handleChange} name='userid' className='form-control' placeholder='userid'/></dd>

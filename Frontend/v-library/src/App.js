@@ -1,4 +1,3 @@
-import './App.css';
 import {Routes,Route, BrowserRouter} from "react-router-dom"
 import HomeVideo from './components/HomeVideo';
 import AdminLogin from './components/AdminLogin';
@@ -8,6 +7,7 @@ import AddVideo from './components/AddVideo';
 import EditVideo from './components/EditVideo';
 import UserRegister from './components/UserRegister';
 import UserDash from './components/UserDash';
+import Protected from "./Protected";
 function App() {
   return (
     <div className="box">
@@ -22,7 +22,7 @@ function App() {
       <Route path='/addvideo' Component={AddVideo}/>
       <Route path='/editvideo/:id' Component={EditVideo}/>
       <Route path='/userregister' Component={UserRegister}/>
-      <Route path='/userdash' Component={UserDash}/>
+      <Route path='/userdash' element={<Protected Component={UserDash}/>}/>
       </Routes>
       </BrowserRouter>
      </div>
